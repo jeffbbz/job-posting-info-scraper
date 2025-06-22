@@ -1,3 +1,5 @@
+![posting](https://github.com/user-attachments/assets/d25510f8-a6f1-41f4-9a3d-f83918e37be3)
+
 # Job Posting Info Scraper
 
 [![forthebadge](http://forthebadge.com/images/badges/made-with-javascript.svg)](http://forthebadge.com)
