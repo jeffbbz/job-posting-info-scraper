@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "Job Info Scraper",
+  "version": "1.0",
+  "description": "Scrapes job listings from Ashby, BambooHR, Greenhouse, Lever, and Rippling and exports to TSV",
+  "icons": {
+    "1": "icons/posting.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/posting.png",
+    "default_title": "Job Info Scraper"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "activeTab",
+    "clipboardWrite"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.ashbyhq.com/*",
+        "https://*.bamboohr.com/*",
+        "https://*.greenhouse.io/*", 
+        "https://*.lever.co/*",
+        "https://*.rippling.com/*"
+      ],
+      "js": [
+        "utils.js",
+        "sites/ashby.js",
+        "sites/bamboo.js",
+        "sites/greenhouse.js",
+        "sites/lever.js",
+        "sites/rippling.js",
+        "content.js"
+      ]
+    }
+  ]
+}
